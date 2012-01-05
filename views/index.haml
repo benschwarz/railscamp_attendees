@@ -1,0 +1,14 @@
+!!!5
+%html{lang: 'en'}
+  %head
+    %title Railscamp X - Attendees
+    %style
+      :plain
+        article { display: block; float: left; margin: 0.5em 0.5em; }
+  %body
+    - for attendee in @attendees
+      %article
+        - if attendee
+          %a{href: "http://twitter.com/#{attendee}", rel: 'external'}
+            %img{alt: attendee, src: "http://img.tweetimag.es/i/#{attendee}_b"}
+    
